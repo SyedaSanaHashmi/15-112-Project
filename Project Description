@@ -1,0 +1,24 @@
+# 15-112-Project
+
+--Pyano-- (Working title)
+
+-	Description:
+
+In this project I will be using pre-existing audio files of music played on the piano. I will then map the different frequencies of the different notes to a display. This is then used to create a user-friendly piano tutorial for a piece that the user wants to learn. As an enhancement timestamps can be read to show duration, which will determine how long each note is to be played, more suitable for digital piano.
+
+-	Libraries, Features and User Interface:
+
+I will be using Aubio, pyAudio, audioop, and SciPy. I am planning to use SciPy as a more comprehensive form of NumPy, in which I will need to use Fourier Transform (fftpack) to get sound frequencies. Aubio, pyAudio and audioop should help me with sound manipulation. I may not use all of these libraries¬¬- I will use them appropriately as needed in the code.
+
+The main logic of the code is as follows: I will have a pre-existing list of frequencies for every key in the piano. For every frequency, once I have the given sound frequencies of the audio at a particular time (which I will call a frame), I will get rid of all other sound by using frequency filters and focus on that one note. This will be done several times per frame until all notes are accounted for in a frame. Then, all the notes along with the frame’s timestamp will be stored to be used later in the user interface. This will be done for every frame until the song is finished. The resulting data will be organized and structured so that the user sees something like what is shown in this video:
+https://www.youtube.com/watch?v=XV0__7yn_IQ
+ 
+
+
+-	November 25th checkpoint:
+
+I am planning to have the frequency filtering system functional by the 25th, and be able to show what my data looks like (there will be no user interface at this time, so it will just be unrefined data)
+
+-	December 6th checkpoint:
+
+By the end of this project I should have a program that takes any piano audio and after processing it, converts it into a piano tutorial as shown above. The user interface should be similar to what is shown above. The user should have the ability to pause, play and rewind the tutorial to any particular point, as well as set a bookmark to mark the point up to where they have last learned.
